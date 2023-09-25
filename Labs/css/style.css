@@ -1,0 +1,117 @@
+body {
+    background: url(../img/land.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 16px 16px 16px 130px;
+    font-family: Montserrat, sans-serif;
+}
+
+nav {
+    display: flex;
+    gap: 16px;
+}
+
+nav button {
+    margin-left: auto;
+}
+
+.nav__item {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 500;
+    background: inherit;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+    transition: background 0.25s, color 0.25s;
+}
+
+.nav__item:hover {
+    background: #5D26C1;
+}
+
+section.request {
+    display: flex;
+    align-items: center;
+}
+
+.hi__title {
+    color: #FFF;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 74px;
+}
+
+.hi__subtitle {
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 56px;
+}
+
+.bid__button {
+    margin-right: 24px;
+}
+
+.bid__button button {
+    width: 307px;
+    height: 75px;
+    cursor: pointer;
+    border-radius: 38px;
+    background: #CB7108;
+    color: #1C0808;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.play__button button {
+    width: fit-content;
+    cursor: pointer;
+    padding: 0;
+    background-color: rgba(28,28,28,0);
+    border: none;
+}
+
+.request button:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.notion {
+    flex-basis: 144px;
+    color: #807272;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.courses__row {
+    display: flex;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.courses__row button {
+    padding: 2px;
+    border: none;
+}
+
+.courses__row button:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 23px #53ea93;
+}
+
+.links__title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #807272;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.social__links {
+    display: flex;
+    gap: 34px;
+}
