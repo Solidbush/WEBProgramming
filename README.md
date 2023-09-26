@@ -2,7 +2,7 @@
 ---
 ### Задание выполнил Студент группы М33111 [Гаврилов Алексей](https://github.com/Solidbush)
 
-[Сайт](https://solidbush.github.io/WEBProgramming/)
+[Сайт](https://github.com/Solidbush/WebProgramming/blob/master/Labs/index.html)
 
 ---
 ## Лабораторная работа №1:
