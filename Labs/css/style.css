@@ -1,10 +1,12 @@
 body {
     background: url(../img/land.jpg);
     background-size: cover;
-    min-height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
+    min-height: 100%;
     padding: 16px 16px 16px 130px;
     font-family: Montserrat, sans-serif;
+    position: static;
 }
 
 nav {
@@ -50,11 +52,8 @@ section.request {
     line-height: 56px;
 }
 
-.bid__button {
-    margin-right: 24px;
-}
-
 .bid__button button {
+    margin-right: 24px;
     width: 307px;
     height: 75px;
     cursor: pointer;
@@ -89,8 +88,10 @@ section.request {
 
 .courses__row {
     display: flex;
+    width: 100%;
     margin-top: 40px;
     gap: 40px;
+    flex-wrap: wrap
 }
 
 .courses__row button {
