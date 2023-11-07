@@ -14,6 +14,7 @@ nav {
 
 nav button {
     margin-left: auto;
+    border-radius: 50%;
 }
 
 .nav__item {
@@ -115,4 +116,111 @@ section.request {
 .social__links {
     display: flex;
     gap: 34px;
+}
+
+table {
+    border: 1px solid #000000;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+    border-left: 1px solid #000000;
+}
+
+table th {
+    padding: 8px;
+    background-color: white;
+}
+
+table td {
+    border: 1px solid #0a0a0a;
+    text-align: center;
+    background-color: white;
+    padding: 8px;
+}
+
+tbody > tr > td{
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+}
+
+
+tr:nth-child(2n - 1) td {
+    background-color: #393d94;
+}
+
+#table-container {
+    container-name: table-data;
+    container-type: inline-size;
+}
+
+@container table-data (max-width: 1000px) {
+    table {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    td:nth-child(2) {
+        display: none;
+    }
+
+    th:nth-child(2) {
+        display: none;
+    }
+}
+
+@container table-data (max-width: 700px) {
+    table {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    td:nth-child(3) {
+        display: none;
+    }
+
+    th:nth-child(3) {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0);
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(9, 47, 240, 0.53);
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #a08fbe;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0);
+}
+
+footer > h2{
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    color: white;
+}
+
+footer > thead{
+    background-color: white;
+}
+
+.load__data {
+    font-family: Montserrat, sans-serif;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    margin: 24px;
 }
