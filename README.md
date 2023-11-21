@@ -4,7 +4,7 @@
 
 [Сайт](https://solidbush.github.io/WebProgramming/Labs/index.html)
 
-[Таблица](https://solidbush.github.io/WebProgramming/Lab5/Lab5Table/index.html)
+[Таблица](https://solidbush.github.io/WebProgramming/Lab5Table/index.html)
 
 ---
 ## Лабораторная работа №1:
