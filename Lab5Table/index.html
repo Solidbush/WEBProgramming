@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <script src="../LoginPage/js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="form">
+    <fieldset><legend>Генератор таблиц</legend>
+        <div class="table__generator">
+            <form>
+                <p>
+                    <label for="rows">Количество строк:</label>
+                    <input type="text" id="rows" name="CountRows" placeholder="Count of rows" required>
+                </p>
+                <br>
+                <p>
+                    <label for="columns">Количество колонок:</label>
+                    <input type="text" id="columns" name="CountColumns" placeholder="Count of columns" required>
+                </p>
+                <br>
+                <div class="buttons">
+                    <button type="button" id="reset" onclick="clearForm()">Очистить</button>
+                    <button type="button" id="submit" onclick="buttonOnClick()">Сгенерировать</button>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</div>
+</body>
+</html>
