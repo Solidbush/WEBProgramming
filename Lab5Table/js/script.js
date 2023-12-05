@@ -22,6 +22,8 @@ function clearForm() {
 function buttonOnClick() {
     let count_rows = document.getElementById('rows').value;
     let count_columns = document.getElementById('columns').value;
+    document.getElementById('rows').value = count_rows;
+    document.getElementById('columns').value = count_columns;
     generateTable(count_rows, count_columns)
 }
 
@@ -54,5 +56,12 @@ function generateTable(count_rows, count_columns) {
     }
     else {
         window.alert("Something was wrong! Please, try to input only positive counts!");
+    }
+}
+
+document.onkeydown = () => {
+
+    if(e.keyCode === 13) {
+        searchForm.submit();
     }
 }
