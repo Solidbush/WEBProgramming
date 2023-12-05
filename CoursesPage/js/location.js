@@ -1,6 +1,6 @@
 const courses_page = "https://solidbush.github.io/WebProgramming/CoursesPage/index.html";
 const main_page = "https://solidbush.github.io/WebProgramming/Labs/index.html";
-const reviews_page = "https://solidbush.github.io/WebProgramming/Reviews/index.html"
+const reviews_page = "https://solidbush.github.io/WebProgramming/Reviews/index.html";
 
 window.onload = function () {
     if (courses_page === document.location.href) {
