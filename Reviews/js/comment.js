@@ -8,14 +8,24 @@ class Comment extends HTMLElement {
     }
 
     render() {
-        const copy = commentItem.content.cloneNode(true);
-        copy.querySelector('h3').innerText = this.getAttribute('name');
-        this.shadow.replaceChildren(copy);
+        let commentList = document.getElementById('comments');
+        const template = document.getElementById("commentItem");
+        let clone = template.content.cloneNode(true);
+        let title = clone.querySelector('h3').textContent = this.name;
+        let body = clone.querySelector('p').textContent = this.body;
+        commentList.appendChild(clone);
+        console.log(this.name);
+        console.log(this.email);
+        console.log(this.body)
     }
 }
 
 customElements.define('comment-card', Comment);
 
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-    .then(response => response.json())
-    .then(json => console.log(json['body']))
+window.onload = function () {
+    for (let i = 0; i < 100; i++){
+        fetch(`https://jsonplaceholder.typicode.com/comments/${i}`)
+            .then(response => response.json())
+            .then(json => new Comment(json['name'], json['email'], json['body']).render())
+    }
+}

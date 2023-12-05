@@ -85,7 +85,7 @@ footer > thead {
     flex-wrap: wrap;
 }
 
-.comments__item {
+.comment__item {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -152,7 +152,7 @@ footer > thead {
         width: 400px;
     }
 
-    .comments__item {
+    .comment__item {
         justify-content: center;
     }
 }
