@@ -8,24 +8,45 @@ class Comment extends HTMLElement {
     }
 
     render() {
-        let commentList = document.getElementById('comments');
         const template = document.getElementById("commentItem");
         let clone = template.content.cloneNode(true);
         let title = clone.querySelector('h3').textContent = this.name;
         let body = clone.querySelector('p').textContent = this.body;
-        commentList.appendChild(clone);
         console.log(this.name);
         console.log(this.email);
-        console.log(this.body)
+        console.log(this.body);
+        return clone;
+    }
+
+    static get observedAttributes() {
+        return ['name', 'email', 'body'];
+    }
+
+    attributeChangedCallback(name, email, body) {
+        this.name = name;
+        this.email = email;
+        this.body = body;
+        this.render();
     }
 }
 
 customElements.define('comment-card', Comment);
 
-window.onload = function () {
-    for (let i = 0; i < 100; i++){
-        fetch(`https://jsonplaceholder.typicode.com/comments/${i}`)
-            .then(response => response.json())
-            .then(json => new Comment(json['name'], json['email'], json['body']).render())
-    }
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
 }
+window.addEventListener('load', async (event) => {
+    let commentList = document.getElementById('comments');
+    let random = getRandomInt(1, 101)
+    fetch(`https://jsonplaceholder.typicode.com/posts/${random}/comments`)
+        .then(response => response.json())
+        .then(json => {
+            json.forEach((item) => {
+                let tempComment = new Comment(item['name'], item['email'], item['body']).render();
+                commentList.appendChild(tempComment);
+            })
+        })
+});
+
