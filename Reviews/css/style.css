@@ -12,7 +12,7 @@ nav {
     gap: 16px;
 }
 
-nav button {
+nav > a:last-child {
     margin-left: auto;
     border-radius: 50%;
 }
