@@ -46,8 +46,8 @@ function setCommonComment() {
 }
 
 function hideSpinner() {
-    let commentList = document.getElementById('spin-wrapper');
-    commentList.remove()
+    let spinner = document.getElementById('spin-wrapper');
+    spinner.remove()
 }
 
 window.addEventListener('load', async (event) => {
