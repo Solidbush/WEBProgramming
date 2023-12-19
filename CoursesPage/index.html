@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Courses Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
     <script src="../LoginPage/js/script.js"></script>
+    <script src="../CoursesPage/js/location.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,9 +14,10 @@
 <body>
 <header>
     <nav>
-        <a class="nav__item" href="#" target="_parent">Все курсы</a>
-        <a class="nav__item" href="#" target="_blank">Отзывы</a>
-        <a class="nav__item" href="#" target="_blank">Контакты</a>
+        <a class="nav__item" id="main_page" href="../Labs/index.html" target="_parent">Главная страница</a>
+        <a class="nav__item" id="all_courses" href="../CoursesPage/index.html" target="_parent">Все курсы</a>
+        <a class="nav__item" id="reviews" href="../Reviews/index.html" target="_parent">Отзывы</a>
+        <a class="nav__item" id="contacts" href="#" target="_blank">Контакты</a>
         <button class="nav__item" id="login__button"><img src="img/login.png" alt="Login"></button>
     </nav>
 </header>

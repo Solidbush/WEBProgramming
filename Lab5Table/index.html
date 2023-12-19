@@ -15,20 +15,20 @@
 <div class="form">
     <fieldset><legend>Генератор таблиц</legend>
         <div class="table__generator">
-            <form>
+            <form id="form-table" onsubmit="buttonOnClick()" onreset="clearForm()">
                 <p>
                     <label for="rows">Количество строк:</label>
-                    <input type="text" id="rows" name="CountRows" placeholder="Count of rows" required>
+                    <input required type="number" id="rows" name="CountRows" placeholder="Count of rows">
                 </p>
                 <br>
                 <p>
                     <label for="columns">Количество колонок:</label>
-                    <input type="text" id="columns" name="CountColumns" placeholder="Count of columns" required>
+                    <input required type="number" id="columns" name="CountColumns" placeholder="Count of columns">
                 </p>
                 <br>
                 <div class="buttons">
-                    <button type="button" id="reset" onclick="clearForm()">Очистить</button>
-                    <button type="button" id="submit" onclick="buttonOnClick()">Сгенерировать</button>
+                    <input type="reset" id="reset" value="Очистить">
+                    <input type="submit" id="submit" value="Сгенерировать">
                 </div>
             </form>
         </div>
