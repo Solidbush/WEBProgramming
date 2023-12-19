@@ -1,0 +1,89 @@
+body{
+    min-width: 1000px;
+    background: url(../img/land.jpg);
+    background-size: cover;
+    min-height: 100%;
+    padding: 16px 16px 16px 16px;
+    font-family: Montserrat, sans-serif;
+    position: static;
+}
+
+html {
+    min-width: 1000px;
+}
+
+nav {
+    display: flex;
+    gap: 16px;
+}
+
+nav > a:last-child {
+    margin-left: auto;
+    border-radius: 50%;
+}
+
+.nav__item {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 500;
+    background: inherit;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+    transition: background 0.25s, color 0.25s;
+}
+
+.nav__item:hover {
+    background: #5D26C1;
+}
+
+
+.links__title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #807272;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.social__links {
+    display: flex;
+    gap: 34px;
+}
+
+::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0);
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(9, 47, 240, 0.53);
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #a08fbe;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0);
+}
+
+footer > h2 {
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    color: white;
+}
+
+footer > thead {
+    background-color: white;
+}
+
+
+
+
+
+

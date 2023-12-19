@@ -37,6 +37,19 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 }
+
+function setCommonComment() {
+    let commentList = document.getElementById('comments');
+    let tempComment = new Comment("Что-то пошло не так!", "", "Сервис упал и не может подняться =(").render();
+    hideSpinner();
+    commentList.appendChild(tempComment);
+}
+
+function hideSpinner() {
+    let spinner = document.getElementById('spin-wrapper');
+    spinner.remove()
+}
+
 window.addEventListener('load', async (event) => {
     let commentList = document.getElementById('comments');
     let random = getRandomInt(1, 101)
@@ -47,6 +60,9 @@ window.addEventListener('load', async (event) => {
                 let tempComment = new Comment(item['name'], item['email'], item['body']).render();
                 commentList.appendChild(tempComment);
             })
+            hideSpinner();
         })
+        .catch(setCommonComment);
 });
+
 
