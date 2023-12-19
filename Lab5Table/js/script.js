@@ -59,7 +59,7 @@ function generateTable(count_rows, count_columns) {
     }
 }
 
-document.onkeydown = () => {
+document.onkeydown = (e) => {
 
     if(e.keyCode === 13) {
         searchForm.submit();

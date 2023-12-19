@@ -8,14 +8,45 @@ class Comment extends HTMLElement {
     }
 
     render() {
-        const copy = commentItem.content.cloneNode(true);
-        copy.querySelector('h3').innerText = this.getAttribute('name');
-        this.shadow.replaceChildren(copy);
+        const template = document.getElementById("commentItem");
+        let clone = template.content.cloneNode(true);
+        let title = clone.querySelector('h3').textContent = this.name;
+        let body = clone.querySelector('p').textContent = this.body;
+        console.log(this.name);
+        console.log(this.email);
+        console.log(this.body);
+        return clone;
+    }
+
+    static get observedAttributes() {
+        return ['name', 'email', 'body'];
+    }
+
+    attributeChangedCallback(name, email, body) {
+        this.name = name;
+        this.email = email;
+        this.body = body;
+        this.render();
     }
 }
 
 customElements.define('comment-card', Comment);
 
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-    .then(response => response.json())
-    .then(json => console.log(json['body']))
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+window.addEventListener('load', async (event) => {
+    let commentList = document.getElementById('comments');
+    let random = getRandomInt(1, 101)
+    fetch(`https://jsonplaceholder.typicode.com/posts/${random}/comments`)
+        .then(response => response.json())
+        .then(json => {
+            json.forEach((item) => {
+                let tempComment = new Comment(item['name'], item['email'], item['body']).render();
+                commentList.appendChild(tempComment);
+            })
+        })
+});
+
